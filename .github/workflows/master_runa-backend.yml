@@ -3,6 +3,9 @@
 
 name: Build and deploy JAR app to Azure Web App - Runa-backend
 
+env: #sexo
+      APP_CONFIGURATION_CONECTION_STRING: ${{secrets.APP_CONFIGURATION_CONECTION_STRING}}
+
 on:
   push:
     branches:
