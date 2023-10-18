@@ -1,10 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy JAR app to Azure Web App - Runa-backend
-
-env: #sexo
-      APP_CONFIGURATION_CONECTION_STRING: ${{secrets.APP_CONFIGURATION_CONECTION_STRING}}
+name: Build and deploy JAR app to Azure Web App - runnnnnnn
 
 on:
   push:
@@ -50,7 +47,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'Runa-backend'
+          app-name: 'runnnnnnn'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FD59CCABA9F745A7A06DFC78ECB27D58 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_20B0E79F214E4FA7A339AA8A3FCE3EBE }}
           package: '*.jar'
