@@ -44,4 +44,10 @@ public class UsuarioController {
         return requerimientos;
     }
 
+    @CrossOrigin(origins = "*")
+    @DeleteMapping("/requerimiento")
+    public void  deleteRequerimiento() {
+        requerimientoRepository.deleteAll();
+    }
+
 }
