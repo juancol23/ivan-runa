@@ -5,9 +5,12 @@ import com.example.runa.model.Usuario;
 import com.example.runa.repository.RequerimientoRepository;
 import com.example.runa.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class UsuarioController {
@@ -50,4 +53,41 @@ public class UsuarioController {
         requerimientoRepository.deleteAll();
     }
 
+    @CrossOrigin(origins = "*")
+    @PutMapping("/requerimiento/{id}")
+    public ResponseEntity<Requerimiento> updateRequerimiento(@PathVariable Long id,
+                                             @RequestBody Requerimiento requerimiento) {
+        Optional<Requerimiento> existingRequerimientoOptional = requerimientoRepository.findById(id+"");
+
+        if (existingRequerimientoOptional.isPresent()) {
+            Requerimiento existingRequerimiento = existingRequerimientoOptional.get();
+
+            // Actualiza los campos del requerimiento existente con los valores proporcionados en el cuerpo de la solicitud
+            existingRequerimiento = requerimiento;
+            // ...
+
+            // Guarda el requerimiento actualizado en la base de datos
+            Requerimiento updatedRequerimiento = requerimientoRepository.save(existingRequerimiento);
+
+            return new ResponseEntity<>(updatedRequerimiento, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @CrossOrigin(origins = "*")
+    @GetMapping("/requerimiento/{id}")
+    public ResponseEntity<Requerimiento> updateRequerimientoUno(@PathVariable Long id) {
+        Optional<Requerimiento> existingRequerimientoOptional = requerimientoRepository.findById(id+"");
+
+        if (existingRequerimientoOptional.isPresent()) {
+            Requerimiento existingRequerimiento = existingRequerimientoOptional.get();
+
+            return new ResponseEntity<>(existingRequerimiento, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
 }
+
