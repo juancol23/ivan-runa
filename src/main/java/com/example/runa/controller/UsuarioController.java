@@ -89,5 +89,33 @@ public class UsuarioController {
         }
     }
 
+    /************************************/
+    @CrossOrigin(origins = "*")
+    @PutMapping("/requerimientos")
+    public ResponseEntity<String> actualizarMasivo(@RequestBody List<Requerimiento> requerimientos) {
+        try {
+            actualizarRequerimientosMasivo(requerimientos);
+            return new ResponseEntity<>("Actualización masiva exitosa", HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>("Error al actualizar requerimientos: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    public void actualizarRequerimientosMasivo(List<Requerimiento> requerimientos) {
+        for (Requerimiento dto : requerimientos) {
+            Optional<Requerimiento> optionalRequerimiento = requerimientoRepository.findById(dto.getId()+"");
+
+            if (optionalRequerimiento.isPresent()) {
+                Requerimiento requerimiento = optionalRequerimiento.get();
+                // Actualiza los campos del objeto requerimiento con los valores del DTO
+                requerimiento.setStatus(dto.getStatus());
+                requerimiento.setVMO(dto.getVMO());
+                requerimiento.setSolicitante(dto.getSolicitante());
+                // Actualiza otros campos si es necesario
+                requerimientoRepository.save(requerimiento);
+            }
+        }
+    }
+
 }
 
