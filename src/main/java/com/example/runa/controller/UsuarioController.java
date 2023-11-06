@@ -26,12 +26,24 @@ public class UsuarioController {
         return usuario;
     }
 
+    @PostMapping("/user")
+    public List<Usuario> guardarUsuarioss(@RequestBody List<Usuario> usuarios) {
+        usuarioRepository.saveAll(usuarios);
+        return usuarios;
+    }
     @CrossOrigin(origins = "*")
     @GetMapping("/user")
     public List<Usuario> guardarUsuario() {
         List<Usuario> listadoUsuarios =  usuarioRepository.findAll();
         return listadoUsuarios;
     }
+
+    @CrossOrigin(origins = "*")
+    @DeleteMapping("/user")
+    public void deleteUsuario() {
+         usuarioRepository.deleteAll();
+    }
+
 
     @CrossOrigin(origins = "*")
     @PostMapping("/requerimiento")
@@ -108,9 +120,12 @@ public class UsuarioController {
             if (optionalRequerimiento.isPresent()) {
                 Requerimiento requerimiento = optionalRequerimiento.get();
                 // Actualiza los campos del objeto requerimiento con los valores del DTO
+               /*
                 requerimiento.setStatus(dto.getStatus());
                 requerimiento.setVMO(dto.getVMO());
                 requerimiento.setSolicitante(dto.getSolicitante());
+                */
+                requerimiento = dto;
                 // Actualiza otros campos si es necesario
                 requerimientoRepository.save(requerimiento);
             }
