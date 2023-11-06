@@ -47,6 +47,16 @@ public class Requerimiento {
     private String pregunta2;
     private String pregunta3;
     private String pregunta4;
+    private String nombre_puesto;
+
+
+    public String getNombre_puesto() {
+        return nombre_puesto;
+    }
+
+    public void setNombre_puesto(String nombre_puesto) {
+        this.nombre_puesto = nombre_puesto;
+    }
 
     public String getStatus() {
         return status;
