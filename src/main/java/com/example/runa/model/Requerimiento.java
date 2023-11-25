@@ -49,6 +49,42 @@ public class Requerimiento {
     private String pregunta4;
     private String nombre_puesto;
 
+    private String adjunto1;
+    private String adjunto2;
+    private String adjunto3;
+    private String adjunto4;
+
+    public String getAdjunto1() {
+        return adjunto1;
+    }
+
+    public void setAdjunto1(String adjunto1) {
+        this.adjunto1 = adjunto1;
+    }
+
+    public String getAdjunto2() {
+        return adjunto2;
+    }
+
+    public void setAdjunto2(String adjunto2) {
+        this.adjunto2 = adjunto2;
+    }
+
+    public String getAdjunto3() {
+        return adjunto3;
+    }
+
+    public void setAdjunto3(String adjunto3) {
+        this.adjunto3 = adjunto3;
+    }
+
+    public String getAdjunto4() {
+        return adjunto4;
+    }
+
+    public void setAdjunto4(String adjunto4) {
+        this.adjunto4 = adjunto4;
+    }
 
     public String getNombre_puesto() {
         return nombre_puesto;
