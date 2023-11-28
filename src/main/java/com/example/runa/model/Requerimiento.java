@@ -54,6 +54,20 @@ public class Requerimiento {
     private String adjunto3;
     private String adjunto4;
 
+    private String antecedentesA;
+    private String antecedentesB;
+    private String antecedentePolicial;
+    private String antecedentePenal;
+    private String antecedenteJudicial;
+    private String certiAdulto;
+    private String multiTest;
+    private String informePsicologico;
+    private String fichaDatos;
+    private String fichaMedica;
+    private String fichaRequerimiento;
+    private String fichaAprobación;
+    private String otrosAdjuntos;
+
     public String getAdjunto1() {
         return adjunto1;
     }
@@ -364,5 +378,109 @@ public class Requerimiento {
 
     public void setPregunta4(String pregunta4) {
         this.pregunta4 = pregunta4;
+    }
+
+    public String getAntecedentesA() {
+        return antecedentesA;
+    }
+
+    public void setAntecedentesA(String antecedentesA) {
+        this.antecedentesA = antecedentesA;
+    }
+
+    public String getAntecedentesB() {
+        return antecedentesB;
+    }
+
+    public void setAntecedentesB(String antecedentesB) {
+        this.antecedentesB = antecedentesB;
+    }
+
+    public String getAntecedentePolicial() {
+        return antecedentePolicial;
+    }
+
+    public void setAntecedentePolicial(String antecedentePolicial) {
+        this.antecedentePolicial = antecedentePolicial;
+    }
+
+    public String getAntecedentePenal() {
+        return antecedentePenal;
+    }
+
+    public void setAntecedentePenal(String antecedentePenal) {
+        this.antecedentePenal = antecedentePenal;
+    }
+
+    public String getAntecedenteJudicial() {
+        return antecedenteJudicial;
+    }
+
+    public void setAntecedenteJudicial(String antecedenteJudicial) {
+        this.antecedenteJudicial = antecedenteJudicial;
+    }
+
+    public String getCertiAdulto() {
+        return certiAdulto;
+    }
+
+    public void setCertiAdulto(String certiAdulto) {
+        this.certiAdulto = certiAdulto;
+    }
+
+    public String getMultiTest() {
+        return multiTest;
+    }
+
+    public void setMultiTest(String multiTest) {
+        this.multiTest = multiTest;
+    }
+
+    public String getInformePsicologico() {
+        return informePsicologico;
+    }
+
+    public void setInformePsicologico(String informePsicologico) {
+        this.informePsicologico = informePsicologico;
+    }
+
+    public String getFichaDatos() {
+        return fichaDatos;
+    }
+
+    public void setFichaDatos(String fichaDatos) {
+        this.fichaDatos = fichaDatos;
+    }
+
+    public String getFichaMedica() {
+        return fichaMedica;
+    }
+
+    public void setFichaMedica(String fichaMedica) {
+        this.fichaMedica = fichaMedica;
+    }
+
+    public String getFichaRequerimiento() {
+        return fichaRequerimiento;
+    }
+
+    public void setFichaRequerimiento(String fichaRequerimiento) {
+        this.fichaRequerimiento = fichaRequerimiento;
+    }
+
+    public String getFichaAprobación() {
+        return fichaAprobación;
+    }
+
+    public void setFichaAprobación(String fichaAprobación) {
+        this.fichaAprobación = fichaAprobación;
+    }
+
+    public String getOtrosAdjuntos() {
+        return otrosAdjuntos;
+    }
+
+    public void setOtrosAdjuntos(String otrosAdjuntos) {
+        this.otrosAdjuntos = otrosAdjuntos;
     }
 }
