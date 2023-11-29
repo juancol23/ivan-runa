@@ -70,6 +70,14 @@ public class Requerimiento {
 
     private String adjuntoBase;
 
+    private String fechaSolicitud;
+    private String tecnologia;
+    private String seniority;
+    private String cliente;
+    private String prioridad;
+    private String motivo;
+    private String OBS_CANCELADOS;
+
     public String getAdjunto1() {
         return adjunto1;
     }
@@ -494,5 +502,61 @@ public class Requerimiento {
 
     public void setAdjuntoBase(String adjuntoBase) {
         this.adjuntoBase = adjuntoBase;
+    }
+
+    public String getFechaSolicitud() {
+        return fechaSolicitud;
+    }
+
+    public void setFechaSolicitud(String fechaSolicitud) {
+        this.fechaSolicitud = fechaSolicitud;
+    }
+
+    public String getTecnologia() {
+        return tecnologia;
+    }
+
+    public void setTecnologia(String tecnologia) {
+        this.tecnologia = tecnologia;
+    }
+
+    public String getSeniority() {
+        return seniority;
+    }
+
+    public void setSeniority(String seniority) {
+        this.seniority = seniority;
+    }
+
+    public String getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(String cliente) {
+        this.cliente = cliente;
+    }
+
+    public String getPrioridad() {
+        return prioridad;
+    }
+
+    public void setPrioridad(String prioridad) {
+        this.prioridad = prioridad;
+    }
+
+    public String getMotivo() {
+        return motivo;
+    }
+
+    public void setMotivo(String motivo) {
+        this.motivo = motivo;
+    }
+
+    public String getOBS_CANCELADOS() {
+        return OBS_CANCELADOS;
+    }
+
+    public void setOBS_CANCELADOS(String OBS_CANCELADOS) {
+        this.OBS_CANCELADOS = OBS_CANCELADOS;
     }
 }
