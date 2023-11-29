@@ -468,13 +468,6 @@ public class Requerimiento {
         this.fichaRequerimiento = fichaRequerimiento;
     }
 
-    public String getFichaAprobación() {
-        return fichaAprobación;
-    }
-
-    public void setFichaAprobación(String fichaAprobación) {
-        this.fichaAprobación = fichaAprobación;
-    }
 
     public String getOtrosAdjuntos() {
         return otrosAdjuntos;
@@ -482,5 +475,13 @@ public class Requerimiento {
 
     public void setOtrosAdjuntos(String otrosAdjuntos) {
         this.otrosAdjuntos = otrosAdjuntos;
+    }
+
+    public String getFichaAprobacion() {
+        return fichaAprobacion;
+    }
+
+    public void setFichaAprobacion(String fichaAprobacion) {
+        this.fichaAprobacion = fichaAprobacion;
     }
 }
