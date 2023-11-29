@@ -68,6 +68,8 @@ public class Requerimiento {
     private String fichaAprobacion;
     private String otrosAdjuntos;
 
+    private String adjuntoBase;
+
     public String getAdjunto1() {
         return adjunto1;
     }
@@ -483,5 +485,14 @@ public class Requerimiento {
 
     public void setFichaAprobacion(String fichaAprobacion) {
         this.fichaAprobacion = fichaAprobacion;
+    }
+
+
+    public String getAdjuntoBase() {
+        return adjuntoBase;
+    }
+
+    public void setAdjuntoBase(String adjuntoBase) {
+        this.adjuntoBase = adjuntoBase;
     }
 }
