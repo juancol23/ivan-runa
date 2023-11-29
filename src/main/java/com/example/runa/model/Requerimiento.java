@@ -65,7 +65,7 @@ public class Requerimiento {
     private String fichaDatos;
     private String fichaMedica;
     private String fichaRequerimiento;
-    private String fichaAprobación;
+    private String fichaAprobacion;
     private String otrosAdjuntos;
 
     public String getAdjunto1() {
