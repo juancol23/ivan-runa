@@ -80,7 +80,7 @@ public class Requerimiento {
 
 
 
-    private Boolean base;
+    private String base;
 
     public String getAdjunto1() {
         return adjunto1;
@@ -564,11 +564,11 @@ public class Requerimiento {
         this.OBS_CANCELADOS = OBS_CANCELADOS;
     }
 
-    public Boolean getBase() {
+    public String getBase() {
         return base;
     }
 
-    public void setBase(Boolean base) {
+    public void setBase(String base) {
         this.base = base;
     }
 }
