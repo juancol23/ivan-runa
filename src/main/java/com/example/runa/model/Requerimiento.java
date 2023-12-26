@@ -78,15 +78,8 @@ public class Requerimiento {
     private String motivo;
     private String OBS_CANCELADOS;
 
-    private String fecha_solicitud;
 
-    public String getFecha_solicitud() {
-        return fecha_solicitud;
-    }
 
-    public void setFecha_solicitud(String fecha_solicitud) {
-        this.fecha_solicitud = fecha_solicitud;
-    }
 
     public String getAdjunto1() {
         return adjunto1;
