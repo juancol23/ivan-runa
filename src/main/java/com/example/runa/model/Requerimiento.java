@@ -77,6 +77,7 @@ public class Requerimiento {
     private String prioridad;
     private String motivo;
     private String OBS_CANCELADOS;
+    private String cantidad;
 
     public String getAdjunto1() {
         return adjunto1;
@@ -558,5 +559,13 @@ public class Requerimiento {
 
     public void setOBS_CANCELADOS(String OBS_CANCELADOS) {
         this.OBS_CANCELADOS = OBS_CANCELADOS;
+    }
+
+    public String getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(String cantidad) {
+        this.cantidad = cantidad;
     }
 }
