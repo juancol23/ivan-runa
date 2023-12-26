@@ -53,7 +53,7 @@ public class UsuarioController {
     }
 
     @CrossOrigin(origins = "*")
-    @PostMapping("/requerimiento")
+    @PostMapping("/requerimientos")
     public List<Requerimiento> guardarRequerimientos(@RequestBody List<Requerimiento> requerimientos) {
         requerimientoRepository.saveAll(requerimientos);
         return requerimientos;
