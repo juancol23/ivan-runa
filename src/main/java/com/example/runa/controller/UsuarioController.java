@@ -73,6 +73,7 @@ public class UsuarioController {
         requerimientoRepository.deleteAll();
     }
 
+    @CrossOrigin(origins = "*")
     @DeleteMapping("/requerimiento/{id}")
     public ResponseEntity<Void> deleteRequerimiento(@PathVariable Long id) {
         // Verificar si el objeto con el ID proporcionado existe
