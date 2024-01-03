@@ -5,6 +5,7 @@ import com.example.runa.model.Usuario;
 import com.example.runa.repository.RequerimientoRepository;
 import com.example.runa.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -71,6 +72,20 @@ public class UsuarioController {
     public void  deleteRequerimiento() {
         requerimientoRepository.deleteAll();
     }
+
+    @CrossOrigin(origins = "*")
+    @DeleteMapping("/requerimiento/{id}")
+    public ResponseEntity<String> deleteRequerimiento(@PathVariable Long id) {
+        try {
+            requerimientoRepository.deleteById(id);
+            return new ResponseEntity<>("Requerimiento eliminado exitosamente", HttpStatus.OK);
+        } catch (EmptyResultDataAccessException e) {
+            return new ResponseEntity<>("Requerimiento no encontrado", HttpStatus.NOT_FOUND);
+        } catch (Exception e) {
+            return new ResponseEntity<>("Error al intentar eliminar el requerimiento", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
 
     @CrossOrigin(origins = "*")
     @PutMapping("/requerimiento/{id}")
