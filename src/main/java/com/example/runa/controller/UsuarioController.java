@@ -87,20 +87,6 @@ public class UsuarioController {
     }
 
     @CrossOrigin(origins = "*")
-    @DeleteMapping("/requerimiento/{id}")
-    public ResponseEntity<String> deleteRequerimiento(@PathVariable Long id) {
-        try {
-            requerimientoRepository.deleteById(id);
-            return new ResponseEntity<>("Requerimiento eliminado exitosamente", HttpStatus.OK);
-        } catch (EmptyResultDataAccessException e) {
-            return new ResponseEntity<>("Requerimiento no encontrado", HttpStatus.NOT_FOUND);
-        } catch (Exception e) {
-            return new ResponseEntity<>("Error al intentar eliminar el requerimiento", HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
-
-
-    @CrossOrigin(origins = "*")
     @PutMapping("/requerimiento/{id}")
     public ResponseEntity<Requerimiento> updateRequerimiento(@PathVariable Long id,
                                              @RequestBody Requerimiento requerimiento) {
