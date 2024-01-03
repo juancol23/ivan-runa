@@ -72,7 +72,7 @@ public class UsuarioController {
         requerimientoRepository.deleteAll();
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/requerimiento/{id}")
     public ResponseEntity<Void> deleteRequerimiento(@PathVariable Long id) {
         // Verificar si el objeto con el ID proporcionado existe
         if (requerimientoRepository.existsById(id)) {
