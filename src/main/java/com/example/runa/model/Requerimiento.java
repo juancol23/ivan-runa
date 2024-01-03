@@ -77,7 +77,23 @@ public class Requerimiento {
     private String prioridad;
     private String motivo;
     private String OBS_CANCELADOS;
-    private String cantidad;
+
+    private String proyectos;
+    private String n_cv_enviados;
+    private String fec_cancelacion;
+    private String canditado_contratado;
+    private String fec_envio_cv;
+    private String fec_envio_canditato;
+    private String fec_aceptacion;
+    private String fec_ing_contratado;
+    private String fec_ing_planilla;
+    private String fuente_reclutamiento;
+    private String cod_sap;
+
+
+
+
+    private String base;
 
     public String getAdjunto1() {
         return adjunto1;
@@ -561,11 +577,99 @@ public class Requerimiento {
         this.OBS_CANCELADOS = OBS_CANCELADOS;
     }
 
-    public String getCantidad() {
-        return cantidad;
+    public String getBase() {
+        return base;
     }
 
-    public void setCantidad(String cantidad) {
-        this.cantidad = cantidad;
+    public void setBase(String base) {
+        this.base = base;
+    }
+
+    public String getProyectos() {
+        return proyectos;
+    }
+
+    public void setProyectos(String proyectos) {
+        this.proyectos = proyectos;
+    }
+
+    public String getN_cv_enviados() {
+        return n_cv_enviados;
+    }
+
+    public void setN_cv_enviados(String n_cv_enviados) {
+        this.n_cv_enviados = n_cv_enviados;
+    }
+
+    public String getFec_cancelacion() {
+        return fec_cancelacion;
+    }
+
+    public void setFec_cancelacion(String fec_cancelacion) {
+        this.fec_cancelacion = fec_cancelacion;
+    }
+
+    public String getCanditado_contratado() {
+        return canditado_contratado;
+    }
+
+    public void setCanditado_contratado(String canditado_contratado) {
+        this.canditado_contratado = canditado_contratado;
+    }
+
+    public String getFec_envio_cv() {
+        return fec_envio_cv;
+    }
+
+    public void setFec_envio_cv(String fec_envio_cv) {
+        this.fec_envio_cv = fec_envio_cv;
+    }
+
+    public String getFec_envio_canditato() {
+        return fec_envio_canditato;
+    }
+
+    public void setFec_envio_canditato(String fec_envio_canditato) {
+        this.fec_envio_canditato = fec_envio_canditato;
+    }
+
+    public String getFec_aceptacion() {
+        return fec_aceptacion;
+    }
+
+    public void setFec_aceptacion(String fec_aceptacion) {
+        this.fec_aceptacion = fec_aceptacion;
+    }
+
+    public String getFec_ing_contratado() {
+        return fec_ing_contratado;
+    }
+
+    public void setFec_ing_contratado(String fec_ing_contratado) {
+        this.fec_ing_contratado = fec_ing_contratado;
+    }
+
+    public String getFec_ing_planilla() {
+        return fec_ing_planilla;
+    }
+
+    public void setFec_ing_planilla(String fec_ing_planilla) {
+        this.fec_ing_planilla = fec_ing_planilla;
+    }
+
+    public String getFuente_reclutamiento() {
+        return fuente_reclutamiento;
+    }
+
+    public void setFuente_reclutamiento(String fuente_reclutamiento) {
+        this.fuente_reclutamiento = fuente_reclutamiento;
+    }
+
+    public String getCod_sap() {
+        return cod_sap;
+    }
+
+    public void setCod_sap(String cod_sap) {
+        this.cod_sap = cod_sap;
     }
 }
