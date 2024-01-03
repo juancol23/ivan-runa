@@ -65,6 +65,19 @@ public class UsuarioController {
         requerimientoRepository.deleteAll();
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteRequerimiento(@PathVariable Long id) {
+        // Verificar si el objeto con el ID proporcionado existe
+        if (requerimientoRepository.existsById(id)) {
+            // Si existe, eliminar el objeto por ID
+            requerimientoRepository.deleteById(id);
+            return ResponseEntity.noContent().build(); // Retorna 204 No Content
+        } else {
+            // Si no existe, puedes devolver un código de estado 404 Not Found o personalizado
+            return ResponseEntity.notFound().build();
+        }
+    }
+
     @CrossOrigin(origins = "*")
     @PutMapping("/requerimiento/{id}")
     public ResponseEntity<Requerimiento> updateRequerimiento(@PathVariable Long id,
