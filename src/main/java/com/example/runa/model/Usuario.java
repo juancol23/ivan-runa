@@ -2,9 +2,11 @@ package com.example.runa.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.TypeAlias;
+
 
 @Entity
 public class Usuario {
@@ -14,6 +16,17 @@ public class Usuario {
     private String perfil;
     private String email;
     private String status;
+
+    public Usuario() {
+    }
+
+    public Usuario(String nombreUsuario, String contraseña, String perfil, String email, String status) {
+        this.nombreUsuario = nombreUsuario;
+        this.contraseña = contraseña;
+        this.perfil = perfil;
+        this.email = email;
+        this.status = status;
+    }
 
     public String getNombreUsuario() {
         return nombreUsuario;
