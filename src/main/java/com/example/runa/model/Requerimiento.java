@@ -1,9 +1,9 @@
 package com.example.runa.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
+
+import java.time.LocalDateTime;
 
 
 //@Entity
@@ -90,8 +90,7 @@ public class Requerimiento {
     private String fuente_reclutamiento;
     private String cod_sap;
 
-
-
+    private LocalDateTime createdAtAudit = LocalDateTime.now();
 
     private String base;
 
@@ -671,5 +670,13 @@ public class Requerimiento {
 
     public void setCod_sap(String cod_sap) {
         this.cod_sap = cod_sap;
+    }
+
+    public LocalDateTime getCreatedAtAudit() {
+        return createdAtAudit;
+    }
+
+    public void setCreatedAtAudit(LocalDateTime createdAtAudit) {
+        this.createdAtAudit = createdAtAudit;
     }
 }

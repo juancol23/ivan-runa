@@ -71,7 +71,8 @@ CREATE TABLE Requerimiento (
     fec_ing_planilla VARCHAR(255),
     fuente_reclutamiento VARCHAR(255),
     cod_sap VARCHAR(255),
-    base VARCHAR(255)
+    base VARCHAR(255),
+    createdAtAudit TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 -- Creación de la tabla Usuario
